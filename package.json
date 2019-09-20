@@ -1,0 +1,41 @@
+{
+	"name": "codehappy",
+	"displayName": "happycode",
+	"description": "make you coding happy",
+	"version": "0.0.2",
+	"publisher": "gaochuan",
+	"engines": {
+		"vscode": "^1.38.0"
+	},
+	"icon": "imgs/logo.png",
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.helloWorld"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [{
+            "command": "extension.helloWorld",
+			"title": "Hello World"
+		}],
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript.json"
+			}
+		]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^3.1.4",
+		"vscode": "^1.1.25",
+		"eslint": "^4.11.0",
+		"@types/node": "^8.10.25",
+		"@types/mocha": "^2.2.42"
+	}
+}
