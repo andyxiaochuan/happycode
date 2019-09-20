@@ -1,58 +1,44 @@
-{
-
-	"Print to console": {
-		"prefix": "logTimexxx",
-		"body": [
-			"$CURRENT_YEAR$CURRENT_MONTH"
-		],
-		"description": "console time"
-	},
-	"Print vue": {
-        "prefix": "happy",
+{	"Print consoellog": {
+        "prefix": "cll",
         "body": [
-			"<template>",
-			"\t<div class='$2'>",
-			"",
-			"\t</div>",
-			"</template>",
-			"<script>",
-			"\texport default{",
-			"\t\tname:'$1',",
-			"\t\tcomponents:{",
-			"\t\t},",
-			"\t\tdata(){",
-			"\t\t\treturn{};",
-			"\t\t},",
-			"\t\t//计算属性",
-			"\t\tcomputed:{},",
-			"\t\t//监控data中的数据变化",
-			"\t\twatch:{},",
-			"\t\t//方法集合",
-			"\t\tmethods:{},",
-			"\t\t//生命周期 - 创建之前",
-			"\t\tbeforeCreate(){},",
-			"\t\t//生命周期 - 创建完成（可以访问当前this实例）",
-			"\t\tcreated(){},",
-			"\t\t//生命周期 - 挂载之前",
-			"\t\tbeforeMount(){},",
-			"\t\t//生命周期 - 挂载完成（可以访问DOM元素）",
-			"\t\tmounted(){},",
-			"\t\t//生命周期 - 更新之前",
-			"\t\tbeforeUpdate(){},",
-			"\t\t//生命周期 - 更新之后",
-			"\t\tupdated(){},",
-			"\t\t//生命周期 - 销毁之前",
-			"\t\tbeforeDestroy(){},",
-			"\t\t//生命周期 - 销毁完成",
-			"\t\tdestroyed(){},",
-			"\t\t//如果页面有keep-alive缓存功能，这个函数会触发",
-			"\t\tactivated(){},",
-			"\t\t}",
-			"\t</script>",
-			"<style scoped>",
- 
-			"</style>"
+			"console.log($1)"
         ],
         "description": "Log output to console"
+	},
+	"setTimeOut": {
+        "prefix": "st",
+        "body": [
+			"setTimeout(() => {",
+			"   $0",
+			"}, $1)",
+        ],
+        "description": "设置定时器"
+	},
+	"定义函数-两个参数": {
+        "prefix": "fd2",
+        "body": [
+			"function $1($2 , $3){",
+			"    $0",
+			"}"
+        ],
+        "description": "定义函数-两个参数"
+	},
+	"定义函数-一个参数": {
+        "prefix": "fd1",
+        "body": [
+			"function $1($2){",
+			"    $0",
+			"}"
+        ],
+        "description": "定义函数-两个参数"
+	},
+	"定义函数-无参数": {
+        "prefix": "fd",
+        "body": [
+			"function $1(){",
+			"    $0",
+			"}"
+        ],
+        "description": "定义函数-无参数"
     }
 }
