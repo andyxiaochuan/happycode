@@ -1,1 +1,2 @@
-# ![Image text](https://raw.githubusercontent.com/andyxiaochuan/happycode/dev/imgs/demo.gif)swelcome to use codehappy
+![Image text](https://raw.githubusercontent.com/andyxiaochuan/happycode/dev/imgs/logo.png)
+

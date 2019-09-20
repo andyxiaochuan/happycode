@@ -2,7 +2,7 @@
 	"name": "codehappy",
 	"displayName": "happycode",
 	"description": "make you coding happy",
-	"version": "0.0.2",
+	"version": "0.0.4",
 	"publisher": "gaochuan",
 	"engines": {
 		"vscode": "^1.38.0"
