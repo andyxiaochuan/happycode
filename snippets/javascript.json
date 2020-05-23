@@ -1,44 +1,85 @@
-{	"Print consoellog": {
-        "prefix": "cll",
-        "body": [
+{
+	"Print consoellog": {
+		"prefix": "cll",
+		"body": [
 			"console.log($1)"
-        ],
-        "description": "Log output to console"
+		],
+		"description": "Log output to console"
 	},
 	"setTimeOut": {
-        "prefix": "st",
-        "body": [
+		"prefix": "st",
+		"body": [
 			"setTimeout(() => {",
 			"   $0",
-			"}, $1)",
-        ],
-        "description": "设置定时器"
+			"}, $1)"
+		],
+		"description": "设置定时器"
 	},
 	"定义函数-两个参数": {
-        "prefix": "fd2",
-        "body": [
+		"prefix": "fd2",
+		"body": [
 			"function $1($2 , $3){",
 			"    $0",
 			"}"
-        ],
-        "description": "定义函数-两个参数"
+		],
+		"description": "定义函数-两个参数"
 	},
 	"定义函数-一个参数": {
-        "prefix": "fd1",
-        "body": [
+		"prefix": "fd1",
+		"body": [
 			"function $1($2){",
 			"    $0",
 			"}"
-        ],
-        "description": "定义函数-两个参数"
+		],
+		"description": "定义函数-两个参数"
 	},
 	"定义函数-无参数": {
-        "prefix": "fd",
-        "body": [
+		"prefix": "fd",
+		"body": [
 			"function $1(){",
 			"    $0",
 			"}"
-        ],
-        "description": "定义函数-无参数"
-    }
+		],
+		"description": "定义函数-无参数"
+	},
+	"课堂互动系统代码提示": {
+		"prefix": "sdk",
+		"body": [
+			"sdk.create({",
+			"	//beginClass 小班课助教调",
+			"	// userKey: 外部获取",
+			"	data: {",
+			"		//用户角色 0:主讲，1:助教，2:学生",
+			"		role: 1,",
+			"   	//用户唯一标识",
+			"		userKey: 1111.1,",
+			"   	//课程唯一标识",
+			"		courseKey: 'coursesss',",
+			"   	//用户名称",
+			"		userName: '张山',",
+			"		//班级名称",
+			"		courseName: '课程test1',",
+			"		//班级唯一标识，通常为外部系统classid",
+			"		classKey: 'x',",
+			"		//班级名称",
+			"		className: 'x',",
+			"		//班级人数",
+			"		classTotal: 20,",
+			"		appId: 3",
+			"	},",
+			"	//外部系统token获取地址",
+			"	tokenUrl: 'v1/interactweb/token/obtain',",
+			"	wrap: 'buttonBox',",
+			"	//错误回调函数",
+			"	onError: error => {},",
+			"   //状态改变回调函数",
+			"	onChangeStatus: state => {",
+			"	this.classtatus = state",
+			"	},",
+			"	onInitOver: info => {",
+			"	}",
+			"})"
+		],
+		"description": "双师互动系统sdk代码提示"
+	}
 }

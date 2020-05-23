@@ -1,8 +1,8 @@
 {
 	"name": "codehappy",
-	"displayName": "happycode",
-	"description": "make you coding happy",
-	"version": "0.0.4",
+	"displayName": "SS-FE",
+	"description": "双师前端开发工具",
+	"version": "0.0.6",
 	"publisher": "gaochuan",
 	"engines": {
 		"vscode": "^1.38.0"
@@ -12,20 +12,39 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"onCommand:extension.happycode"
 	],
 	"main": "./extension.js",
 	"contributes": {
-		"commands": [{
-            "command": "extension.helloWorld",
-			"title": "Hello World"
-		}],
+		"commands": [
+			{
+				"command": "extension.happycode",
+				"title": "happycode"
+			}
+		],
 		"snippets": [
 			{
 				"language": "javascript",
 				"path": "./snippets/javascript.json"
 			}
-		]
+		],
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "beautifulGirl",
+					"title": "美女",
+					"icon": "imgs/logo.png"
+				}
+			]
+		},
+		"views": {
+			"beautifulGirl": [
+				{
+					"id": "beautifulGirl1",
+					"name": "国内美女"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"postinstall": "node ./node_modules/vscode/bin/install",
